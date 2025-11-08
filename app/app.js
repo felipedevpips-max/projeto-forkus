@@ -12,7 +12,7 @@ const musicaIniciar = new Audio("/sons/play.wav");
 const musicaPausar = new Audio("/sons/pause.mp3");
 const musicaParar = new Audio("/sons/beep.mp3");
 const iniciarOuPausarBt = document.querySelector("#start-pause span");
-const bannerBt = document.querySelector("app__card-primary-butto-icon");
+const bannerBt = document.querySelector(".app__card-primary-butto-icon");
 
 let temporDecorridoEmSegundos = 5;
 let intervaloId = null;
@@ -92,14 +92,13 @@ function iniciarOuPausar() {
   }
 
   intervaloId = setInterval(contagemRegressiva, 1000);
-  iniciarOuPausarBt.textContent = "Pausar"; //corrigir
+  iniciarOuPausarBt.textContent = "Pausar";
   bannerBt.setAttribute("src", `/imagens/pause.png`);
 }
 
 function zerar() {
   clearInterval(intervaloId);
+  bannerBt.setAttribute("src", `/imagens/play_arrow.png`);
   iniciarOuPausarBt.textContent = "Começar";
-  bannerBt.setAttribute("src", `/imagens/play__arrow.png`); //corrigir
-  musicaParar.pause();
   intervaloId = null;
 }
