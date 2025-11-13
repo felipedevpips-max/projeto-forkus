@@ -33,7 +33,7 @@ focoBt.addEventListener("click", () => {
 });
 
 curtoBt.addEventListener("click", () => {
-  temporDecorridoEmSegundos = 5;
+  temporDecorridoEmSegundos = 300;
   alterarContexto("descanso-curto");
   curtoBt.classList.add("active");
 });
