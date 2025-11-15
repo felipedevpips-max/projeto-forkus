@@ -30,10 +30,15 @@ function criarElementoTarefa(tarefa) {
     botao.classList.add('app_button-edit')
 
     botao.onclick = () => { //atualizando o Dom
+       // debugger //deplurar e entender
         const novaDescricao = prompt("Qual é o novo nome da tarefa?")
-        paragrafo.textContent = novaDescricao
+        console.log('Nova descrição da tarefa: ', novaDescricao)
+        if(novaDescricao){
+            paragrafo.textContent = novaDescricao
         tarefa.descricao = novaDescricao
         atualizarTarefas()
+        }
+        
     }
 
     const imagemBotao = document.createElement('img')
