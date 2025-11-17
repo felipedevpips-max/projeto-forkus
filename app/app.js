@@ -15,7 +15,7 @@ const iniciarOuPausarBt = document.querySelector("#start-pause span");
 const bannerBt = document.querySelector(".app__card-primary-butto-icon");
 const tempoTela = document.querySelector("#timer");
 
-let temporDecorridoEmSegundos = 5;
+let temporDecorridoEmSegundos = 1500;
 let intervaloId = null;
 
 musica.loop = true;
@@ -27,7 +27,7 @@ musicaFocoInput.addEventListener("change", () => {
 });
 
 focoBt.addEventListener("click", () => {
-  temporDecorridoEmSegundos = 5;
+  temporDecorridoEmSegundos = 1500;
   alterarContexto("foco");
   focoBt.classList.add("active");
 });
